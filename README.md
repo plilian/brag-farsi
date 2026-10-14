@@ -1,135 +1,87 @@
-# Brag فارسی
+<div align="center">
+  <img src="assets/brag-farsi-banner.svg" alt="نمای گرافیکی از تبدیل مسیر محصول به ویدیوی فارسی" width="100%" />
+  <h1>Brag فارسی</h1>
+  <p dir="rtl"><strong>از مسیر واقعی محصول تا ویدیوی معرفی فارسی</strong></p>
+  <p>
+    <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-8b7cf6?style=flat-square" /></a>
+    <img alt="زبان فارسی" src="https://img.shields.io/badge/language-Persian-168f75?style=flat-square" />
+    <img alt="Claude Code" src="https://img.shields.io/badge/Claude_Code-supported-6b58c7?style=flat-square" />
+    <img alt="Codex" src="https://img.shields.io/badge/Codex-supported-20242e?style=flat-square" />
+    <img alt="Gemini CLI" src="https://img.shields.io/badge/Gemini_CLI-supported-3478f6?style=flat-square" />
+    <img alt="Qwen Code" src="https://img.shields.io/badge/Qwen_Code-supported-7b58c8?style=flat-square" />
+  </p>
+</div>
 
-نسخهٔ فارسیِ گردش‌کار متن‌باز [Brag](https://github.com/latent-spaces/brag) برای ساخت ویدیوی معرفی محصول. آدرس وب‌سایت یا مسیر پروژه را بده؛ مهارت سایت زنده را بررسی می‌کند، مسیر واقعی محصول را پیدا می‌کند، شواهد را ثبت می‌کند و با روایت فارسی، تایپوگرافی راست‌به‌چپ، موسیقی و افکت هماهنگ، ویدیوی MP4 می‌سازد.
+یک نسخهٔ فارسی از گردش‌کار متن‌باز [Brag](https://github.com/latent-spaces/brag): آدرس سایت یا مسیر پروژه را به مهارت بده تا محصول را بررسی کند، سناریو و storyboard بسازد و ویدیوی کوتاه فارسی را با چیدمان راست‌به‌چپ، گویندگی و موسیقی رندر کند. خروجی نهایی یک فایل MP4 است.
 
-این پروژه یک Agent Skill است و از ساختار مشترک مهارت‌ها استفاده می‌کند. نصب یکسان برای Claude Code، Codex، Gemini CLI و Qwen Code:
+## شروع سریع
 
-~~~sh
+با [skills CLI](https://github.com/vercel-labs/skills) مهارت کامل را برای ابزارهای دلخواه نصب کن:
+
+```sh
 npx skills add plilian/brag-farsi --skill brag -a claude-code -a codex -a gemini-cli -a qwen-code
-~~~
+```
 
-برای نصب سراسری، `-g` را اضافه کن. برای دیدن جزئیات نصب و پرسش‌های تأیید، گزینهٔ `-y` را اضافه نکن.
+از پوشهٔ پروژه در عامل کدنویسی اجرا کن:
 
-## نصب افزونهٔ بومی
-
-برای Codex:
-
-~~~text
-codex plugin marketplace add plilian/brag-farsi
-codex plugin add brag@brag-farsi
-~~~
-
-برای Claude Code:
-
-~~~text
-/plugin marketplace add plilian/brag-farsi
-/plugin install brag@brag-farsi
-~~~
-
-Gemini CLI و Qwen Code از دستور مشترک `npx skills` بالا پشتیبانی می‌کنند. اگر خواستی نصب را از خود Gemini CLI انجام بدهی، از `gemini skills install https://github.com/plilian/brag-farsi` استفاده کن. برای نصب مستقیم در Qwen Code، پوشهٔ مهارت را در `~/.qwen/skills/brag/` قرار بده.
-
-## شروع
-
-از پوشهٔ پروژه اجرا کن و آدرس واقعی محصول را بده:
-
-~~~text
+```text
 /brag https://example.com
-~~~
+```
 
-یا مسیر پروژهٔ محلی را به مهارت معرفی کن:
+یا مسیر پروژهٔ محلی را بده:
 
-~~~text
+```text
 /brag برای پروژهٔ ./path/to/product یک ویدیوی معرفی فارسی بساز.
-~~~
+```
 
-پیش‌فرض‌ها فارسی ایران، صدای Mana، موسیقی و افکت‌های کم‌شمار است. دو انتخاب گویندگی همین‌ها هستند:
+## گردش‌کار
 
-| صدا | ویژگی | اجرا |
+۱. سایت را باز می‌کند و مسیر اصلی محصول را تا نتیجه دنبال می‌کند؛ صفحهٔ معرفی را با خود محصول اشتباه نمی‌گیرد.
+۲. قابلیت‌ها و ادعاهای قابل‌استناد را ثبت می‌کند و بر همان اساس قلاب، روایت و طرح صحنه‌ها را می‌چیند.
+۳. صحنه‌ها را با رابط محصول، تایپوگرافی راست‌به‌چپ، گفتار و صدای هماهنگ می‌سازد.
+۴. پیش‌نمایش را از نظر فارسی، خوانایی، صدا و دقت محصول بازبینی می‌کند و MP4 را تحویل می‌دهد.
+
+خرید، پرداخت یا تغییر واقعی داده انجام نمی‌شود. برای بخش‌هایی که ورود می‌خواهند، فقط از نشست مجاز یا محیط نمایشی استفاده کن.
+
+## گفتار فارسی
+
+| گزینه | شیوهٔ ساخت | نکته |
 | --- | --- | --- |
-| **Mana** | صدای پیش‌فرضِ تأییدشده؛ متن روایت برای ساخت صدا به Space عمومی فرستاده می‌شود. | آنلاین؛ بدون کلید یا پرداخت |
-| **Amir** | صدای مردانهٔ فارسی | Piper روی دستگاه؛ مدل حدود ۶۴ مگابایت است و بار اول دریافت می‌شود |
+| **Mana** | آنلاین، بدون کلید API | متن روایت برای ساخت صدا به Space عمومی فرستاده می‌شود. کارت مدل استفاده را به پژوهش و توسعه محدود می‌کند؛ برای استفادهٔ تجاری مجوز لازم است. |
+| **Amir** | Piper روی دستگاه | صدای مردانهٔ فارسی؛ مدل در اجرای اول دریافت می‌شود و متن برای ساخت صدا به سرویس بیرونی فرستاده نمی‌شود. |
 
-برای تغییر صدا یا خاموش‌کردن هر لایه، در درخواست بگو:
+Mana صدای پیش‌فرض است. برای انتخاب Amir یا خاموش‌کردن صدا، موسیقی یا افکت‌ها:
 
-~~~text
+```text
 /brag --voice amir
 /brag --no-voice
 /brag --no-music
 /brag --no-sfx
-~~~
+```
 
-پیش از استفاده از Mana، توجه کن که متن روایت به سرویس بیرونی می‌رود و کارت مدل استفاده را به پژوهش و توسعه محدود کرده است. برای ویدیوی تجاری باید از نگه‌دارندگان مجوز بگیری. راهنمای کامل در [اطلاعیهٔ مجوزها](THIRD_PARTY_NOTICES.md) است.
+هر دو گزینه بدون API key و پرداخت کار می‌کنند. جزئیات و محدودیت مجوزها در [اطلاعیهٔ دارایی‌های ثالث](THIRD_PARTY_NOTICES.md) آمده است.
 
-## بررسی درست محصول
+## فارسی و تایپوگرافی
 
-اگر آدرس سایت داده شود، مهارت آن را در مرورگر باز می‌کند و صفحهٔ معرفی را از خود برنامه جدا می‌کند. مسیر اصلی را تا نتیجه دنبال می‌کند، فقط ادعاهایی را در متن می‌آورد که در سایت، رابط در حال اجرا یا کد محصول شاهد دارند، و برای هر ادعا منبع را در طرح داخلی می‌نویسد. اگر بخش برنامه نیاز به ورود داشته باشد، فقط از نشست مجاز و دادهٔ آزمایشی استفاده می‌کند؛ خرید، پرداخت، انتشار یا تغییر واقعی داده را انجام نمی‌دهد. اگر سایت در دسترس نباشد، چیزی را حدس نمی‌زند.
+- متن، روایت و زیرنویس به فارسی ایران نوشته می‌شود؛ نام رسمی برند، URL و عبارت فنی لازم دست‌نخورده می‌ماند.
+- چیدمان راست‌به‌چپ و نشانه‌گذاری فارسی رعایت می‌شود؛ اعراب لازم برای تلفظ پیش از ساخت گفتار اضافه می‌شود.
+- **Vazirmatn** فونت پیش‌فرض است و فایل فونت و مجوزش همراه مهارت می‌آیند. می‌توانی **Estedad**، **Shabnam**، **Sahel** یا **Lalezar** را برای تیتر انتخاب کنی.
+- روش استفاده از فونت و قواعد فاصله‌گذاری و ترکیب متن فارسی و لاتین در [راهنمای تایپوگرافی](skills/brag/references/persian-typography.md) توضیح داده شده است.
 
-## فونت فارسی
+## پیش‌نیازهای رندر
 
-فونت پیش‌فرض **Vazirmatn** است و فایل متغیرش همراه مهارت بسته‌بندی شده؛ برای رندر به نصب سیستم یا دانلود فونت وابسته نیست. برای انتخاب خودت بگو:
-
-~~~text
-/brag --font Estedad --title-font Lalezar
-~~~
-
-| فونت | کاربرد پیشنهادی |
-| --- | --- |
-| Vazirmatn | متن بدنه و زیرنویس؛ خوانایی بالا در قاب کوچک |
-| Estedad | متن بدنه یا تیتر حرفه‌ای |
-| Shabnam | لحن نرم و دوستانه |
-| Sahel | لحن گرم و ساده |
-| Lalezar | فقط تیتر نمایشی و کوتاه |
-
-مهارت فونت را در پروژهٔ ویدیو محلی بار می‌کند و مجوزش را همراه فایل نگه می‌دارد. برای فونت‌های انتخابیِ دیگر از منبع رسمی استفاده کن. قواعد کامل شکل‌دهی فارسی، نیم‌فاصله، اعداد و قطعه‌های لاتین در [راهنمای تایپوگرافی فارسی](skills/brag/references/persian-typography.md) آمده است.
-
-## مسیر ساخت
-
-۱. وب‌سایت، رابط زنده و در صورت وجود کد پروژه را بررسی می‌کند و شواهد قابلیت‌ها را ثبت می‌کند.
-۲. زاویهٔ خلاقه، قلاب آغازین، روایت و storyboard فارسی را بر اساس همان شواهد می‌چیند.
-۳. رابط واقعی محصول را بازسازی یا قاب‌بندی می‌کند؛ از تصویرهای سایت فقط به‌عنوان مرجع استفاده می‌کند.
-۴. ترکیب، حرکت، صدا و رندر را با Hyperframes می‌سازد و خروجی را از نظر فارسی، زمان‌بندی و ادعاها بازبینی می‌کند.
-
-خروجی نهایی مهارت MP4 است. طرح، صداها و فایل‌های میانی داخل پوشهٔ `work/` می‌مانند. اجرای کامل با هر چهار ابزار یکسان است؛ نسخهٔ کم‌حجم `brag-slim` فقط وقتی استفاده می‌شود که خودت صریحاً حالت سبک را بخواهی.
-
-### انتخاب سبک و قاب
-
-~~~text
-/brag --format vertical --tone polished --duration 20
-~~~
-
-قاب‌ها: `landscape`، `vertical`، `square`. لحن‌ها: `default`، `polished`، `yc-parody`، `chaotic`، `deadpan`، `cinematic` و `app-store`. درخواست عادی را هم می‌توانی با زبان طبیعی بنویسی؛ خواستهٔ صریح تو مقدم است.
-
-## نیازمندی‌ها
-
-- یکی از Claude Code، Codex، Gemini CLI یا Qwen Code؛
+- Claude Code، Codex، Gemini CLI یا Qwen Code؛
 - Node.js نسخهٔ ۲۲ یا بالاتر و Hyperframes CLI برای ساخت ویدیو؛
-- FFmpeg در `PATH`؛
-- Python نسخهٔ ۳٫۱۱ یا بالاتر برای اسکریپت‌های صدا و تحلیل موسیقی؛
-- برای Mana بستهٔ `gradio_client`؛ برای Amir بستهٔ `piper-tts`.
+- FFmpeg؛
+- Python نسخهٔ ۳٫۱۱ یا بالاتر برای اسکریپت‌های صوتی؛
+- بستهٔ `gradio_client` برای Mana یا `piper-tts` برای Amir.
 
-برای ساخت دستی گویندگی، ابتدا متن UTF-8 را در فایل ذخیره کن:
+خروجی هر اجرا در پوشهٔ `brag-output/` ساخته می‌شود؛ فایل نهایی `brag.mp4` است. اگر این پوشه از قبل وجود داشته باشد، مهارت پوشهٔ تازه‌ای با زمان اجرا می‌سازد.
 
-~~~sh
-python -m pip install gradio_client
-python skills/brag/scripts/generate_persian_voiceover.py path/to/voiceover.txt --voice mana --output path/to/voiceover.wav
-~~~
+## مجوزها و اعتبار
 
-~~~sh
-python -m pip install piper-tts
-python skills/brag/scripts/generate_persian_voiceover.py path/to/voiceover.txt --voice amir --output path/to/voiceover.wav
-~~~
+کد و مستندات این مخزن تحت مجوز MIT هستند و این پروژه بر پایهٔ [Brag اصلی](https://github.com/latent-spaces/brag) ساخته شده است. موسیقی‌های ضمیمه‌شده CC BY 4.0 هستند و افکت‌ها CC0؛ گفتار، فونت و وابستگی‌ها مجوزهای جداگانه دارند. پیش از بازنشر یا استفاده، [اطلاعیهٔ کامل مجوزها و اعتباردهی](THIRD_PARTY_NOTICES.md) را بخوان.
 
-## مجوز و نگه‌داری
+---
 
-کد و مستندات این مخزن تحت MIT و با حفظ اعتبار پروژهٔ اصلی Brag عرضه می‌شوند. موسیقی، افکت‌ها، فونت‌ها و مدل‌های گفتار مجوزهای جداگانه دارند؛ اعتبار و محدودیت هرکدام در [اطلاعیهٔ دارایی‌های ثالث](THIRD_PARTY_NOTICES.md) ثبت شده است. فایل ویدیوی ساخته‌شده جزو مخزن منبع نیست.
-
-## منابع
-
-- [مخزن اصلی Brag](https://github.com/latent-spaces/brag)
-- [راهنمای Agent Skills در skills CLI](https://github.com/vercel-labs/skills)
-- [مستندات مهارت‌های Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/using-agent-skills.md)
-- [مستندات مهارت‌های Qwen Code](https://github.com/QwenLM/qwen-code/blob/main/docs/users/features/skills.md)
-- [مستندات بسته‌بندی افزونهٔ Codex](https://developers.openai.com/plugins/build/plugins)
-- [Space صدای Mana](https://huggingface.co/spaces/abreza/mana-tts) و [کارت مدل](https://huggingface.co/MahtaFetrat/Persian-Tacotron2-on-ManaTTS)
-- [Piper](https://github.com/OHF-Voice/piper1-gpl)، [مدل فارسی Amir](https://huggingface.co/rhasspy/piper-voices/tree/main/fa/fa_IR/amir/medium)
-- [Vazirmatn](https://github.com/rastikerdar/vazirmatn)، [Estedad](https://github.com/aminabedi68/Estedad)، [Shabnam](https://github.com/rastikerdar/shabnam-font)، [Sahel](https://github.com/rastikerdar/sahel-font)، [Lalezar](https://github.com/BornaIz/Lalezar)
+<p align="center" dir="rtl">اگر برای فارسی‌سازی یا سازگاری با عامل دیگری بهبودی داری، issue یا pull request باز کن.</p>

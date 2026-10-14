@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brag",
   "version": "1.0.0",
-  "description": "ساخت ویدیوی فارسی از URL یا کد محصول با روایت و چیدمان راست‌به‌چپ.",
+  "description": "سایت یا کد محصول را بررسی می‌کند و بر پایهٔ مسیر واقعی استفاده، ویدیوی معرفی فارسی با چیدمان راست‌به‌چپ و صدای هماهنگ می‌سازد.",
   "author": {
     "name": "Daal Group"
   },
