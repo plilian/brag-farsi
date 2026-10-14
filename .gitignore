@@ -1,0 +1,18 @@
+brag-output/
+brag-output-*/
+*.mp4
+.env
+.env.*
+
+# سایت نمونه و پروژه‌های نمایشی جزو این نسخهٔ ویدیومحور نیستند.
+docs/
+examples/
+PRODUCT.md
+.agents/
+
+# فایل‌های موقت مرورگر و خروجی‌های نمایشی جزو کد منبع نیستند.
+.playwright-cli/
+.playwright-mcp/
+videos/
+.claude/
+.opencode/

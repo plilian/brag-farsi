@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brag",
+  "version": "1.0.0",
+  "description": "ساخت ویدیوی فارسی از URL یا کد محصول با روایت و چیدمان راست‌به‌چپ.",
+  "author": {
+    "name": "Daal Group"
+  },
+  "repository": "https://github.com/plilian/brag-farsi",
+  "license": "MIT",
+  "keywords": ["ویدیو", "فارسی", "محصول", "hyperframes", "skill"]
+}

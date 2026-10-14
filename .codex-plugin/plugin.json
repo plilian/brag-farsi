@@ -1,0 +1,25 @@
+{
+  "name": "brag",
+  "version": "1.0.0",
+  "description": "ساخت ویدیوی معرفی فارسی از URL یا کد محصول، بر پایهٔ مسیر و رابط واقعی.",
+  "author": {
+    "name": "Daal Group"
+  },
+  "repository": "https://github.com/plilian/brag-farsi",
+  "license": "MIT",
+  "keywords": ["ویدیو", "فارسی", "محصول", "hyperframes", "skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ویدیوی فارسی محصول",
+    "shortDescription": "ساخت ویدیوی فارسی از سایت یا محصول واقعی.",
+    "longDescription": "وب‌سایت زنده و مسیر واقعی استفاده را بررسی می‌کند و ویدیوی معرفی فارسی با متن راست‌به‌چپ، گویندگی، موسیقی و افکت هماهنگ می‌سازد.",
+    "developerName": "Daal Group",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Execute"],
+    "defaultPrompt": [
+      "برای این محصول یک ویدیوی معرفی فارسی بساز.",
+      "از URL سایت و مسیر واقعی استفادهٔ محصول یک ویدیوی کوتاه درست کن.",
+      "این پروژه را به ویدیوی فارسیِ خوش‌ریتم تبدیل کن."
+    ]
+  }
+}
